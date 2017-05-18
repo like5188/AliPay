@@ -8,45 +8,14 @@ ext {
 
     deps = [
             appcompat_v7            : "com.android.support:appcompat-v7:${compileSdkVersion}.+",
-            recyclerview            : "com.android.support:recyclerview-v7:${compileSdkVersion}.+",
-            design                  : "com.android.support:design:${compileSdkVersion}.+",
-
-            objectbox_android       : "io.objectbox:objectbox-android:0.9.12",
-
             junit                   : "junit:junit:4.12",
 
             rxjava                  : "io.reactivex.rxjava2:rxjava:2.0.8",
             rxandroid               : "io.reactivex.rxjava2:rxandroid:2.0.1",
             rxbinding               : "com.jakewharton.rxbinding2:rxbinding:2.0.0",
 
-            rxlifecycle_components  : "com.trello.rxlifecycle2:rxlifecycle-components:2.0.1",
-
-            permission              : "pub.devrel:easypermissions:0.3.1",
-
-            retrofit2_converter_gson: 'com.squareup.retrofit2:converter-gson:2.2.0',
-            retrofit2_retrofit      : 'com.squareup.retrofit2:retrofit:2.2.0',
-            retrofit2_adapter       : 'com.squareup.retrofit2:adapter-rxjava2:2.2.0',
-
-            okhttp3_okhttp          : "com.squareup.okhttp3:okhttp:3.6.0",
-            okhttp3_okhttp_logging  : "com.squareup.okhttp3:logging-interceptor:3.6.0",
-
-            glide                   : "com.github.bumptech.glide:glide:3.7.0",// glide图片加载库
-            glide_transformations   : "jp.wasabeef:glide-transformations:2.0.1",// glide对应的图片处理库，可以转换图片为圆形、圆角矩形、高斯模糊等等效果
-
-            csv                     : "au.com.bytecode:opencsv:2.4",// csv文件解析
-
-            greendao                : "org.greenrobot:greendao:3.2.0",// greendao
-
-            multidex                : "com.android.support:multidex:1.0.1",// 65535限制
-
-            javapoet                : "com.squareup:javapoet:1.8.0",// 自动生成源码的库
-            auto_service            : "com.google.auto.service:auto-service:1.0-rc3",// 自动生成注解处理器的库
-
-            umeng                   : "com.umeng.analytics:analytics:latest.integration",// 友盟统计
-
             // 自己写的库
-            rxbus_compiler          : "com.github.like5188.RxBus:rxbus-compiler:1.0.1",
-            rxbus                   : "com.github.like5188.RxBus:rxbus:1.0.1",
+            rxbus                   : "com.github.like5188.RxBus:rxbus:1.0.0",
             Logger                  : "com.github.like5188:Logger:1.0.0",
 
     ]
