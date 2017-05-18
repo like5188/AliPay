@@ -46,7 +46,7 @@ dependencies {
     compile rootProject.ext.deps.rxandroid
     compile rootProject.ext.deps.rxbinding
 
-    compile files("libs/alipaySingle-20170510.jar")
+    compile files('libs/alipaySingle-20170510.jar')
 }
 
 apply from: rootProject.file('./gradle-mvn-push.gradle')
