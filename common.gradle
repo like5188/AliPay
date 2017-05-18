@@ -48,11 +48,6 @@ ext {
 
             umeng                   : "com.umeng.analytics:analytics:latest.integration",// 友盟统计
 
-            jpush                   : files("libs/jpush-android-2.1.9.jar"),// 极光推送
-            alipay                  : files("libs/alipaySdk-20160825.jar"),// 支付宝支付
-            wxpay                   : files("libs/libammsdk.jar"),// 微信支付
-            baidumap                : files("libs/BaiduLBS_Android.jar"),// 百度地图
-            tengxunX5               : files("libs/tbs_sdk_thirdapp_v2.5.0.1031_36880_sharewithdownload_obfs_20161107_154437.jar")// 腾讯浏览器X5内核
     ]
 
 }
