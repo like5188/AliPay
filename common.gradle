@@ -19,10 +19,6 @@ ext {
             rxandroid               : "io.reactivex.rxjava2:rxandroid:2.0.1",
             rxbinding               : "com.jakewharton.rxbinding2:rxbinding:2.0.0",
 
-            rxbus_compiler          : "com.github.like5188.RxBus:rxbus-compiler:1.0.1",
-            rxbus                   : "com.github.like5188.RxBus:rxbus:1.0.1",
-            Logger                  : "com.github.like5188:Logger:1.0.0",
-
             rxlifecycle_components  : "com.trello.rxlifecycle2:rxlifecycle-components:2.0.1",
 
             permission              : "pub.devrel:easypermissions:0.3.1",
@@ -47,6 +43,11 @@ ext {
             auto_service            : "com.google.auto.service:auto-service:1.0-rc3",// 自动生成注解处理器的库
 
             umeng                   : "com.umeng.analytics:analytics:latest.integration",// 友盟统计
+
+            // 自己写的库
+            rxbus_compiler          : "com.github.like5188.RxBus:rxbus-compiler:1.0.1",
+            rxbus                   : "com.github.like5188.RxBus:rxbus:1.0.1",
+            Logger                  : "com.github.like5188:Logger:1.0.0",
 
     ]
 
