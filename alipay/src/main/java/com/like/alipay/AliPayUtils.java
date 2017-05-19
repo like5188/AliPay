@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.alipay.sdk.app.PayTask;
 import com.like.logger.Logger;
 import com.like.rxbus.RxBus;
+import com.like.toast.ToastUtils;
 
 import java.util.Map;
 

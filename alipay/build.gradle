@@ -41,10 +41,7 @@ dependencies {
 
     compile rootProject.ext.deps.rxbus
     compile rootProject.ext.deps.Logger
-
-    compile rootProject.ext.deps.rxjava
-    compile rootProject.ext.deps.rxandroid
-    compile rootProject.ext.deps.rxbinding
+    compile rootProject.ext.deps.Toast
 
     compile files('libs/alipaySingle-20170510.jar')
 }
