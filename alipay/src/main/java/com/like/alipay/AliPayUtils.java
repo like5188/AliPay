@@ -75,10 +75,9 @@ public class AliPayUtils {
     /**
      * get the sdk version.
      */
-    public void getSDKVersion() {
+    public String getSDKVersion() {
         PayTask payTask = new PayTask(mActivity);
-        String version = payTask.getVersion();
-        ToastUtils.showShortCenter(mActivity, version);
+        return payTask.getVersion();
     }
 
 
