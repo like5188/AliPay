@@ -11,7 +11,6 @@ import com.like.commonlib.base.viewmodel.BaseViewModel;
 import com.like.commonlib.retrofit.BaseInterceptor;
 import com.like.commonlib.retrofit.RequestConfig;
 import com.like.commonlib.retrofit.RetrofitUtils;
-import com.like.commonlib.retrofit.listener.OnResponseListener;
 import com.like.commonlib.retrofit.security.AESUtil;
 import com.like.commonlib.util.SPUtils;
 
@@ -39,20 +38,15 @@ public class MainActivity extends BaseActivity {
         params.put("payway", 0);// 0：支付宝，1：微信
         params.put("username", "13399857800");
         params.put("amount", "0.01");// 充值金额
-        mRetrofitUtils.request("rechargePersonCenter", new OnResponseListener<String>() {
+        mRetrofitUtils.request("rechargePersonCenter", new MyOnResponseListener(this) {
             @Override
-            public void onSuccess(String result) {
+            public void onSuccess(String data) {
                 try {
-                    String payInfo = new JSONObject(result).getString("payInfo");
+                    String payInfo = new JSONObject(data).getString("payInfo");
                     AliPayUtils.getInstance(MainActivity.this).pay(payInfo);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-            }
-
-            @Override
-            public void onFailure(Throwable t) {
-
             }
         }, params);
     }
