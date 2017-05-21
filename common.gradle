@@ -7,14 +7,14 @@ ext {
     targetCompatibility = JavaVersion.VERSION_1_8
 
     deps = [
-            appcompat_v7: "com.android.support:appcompat-v7:${compileSdkVersion}.+",
-            junit       : "junit:junit:4.12",
+            appcompat_v7 : "com.android.support:appcompat-v7:${compileSdkVersion}.+",
+            junit        : "junit:junit:4.12",
 
             // 自己写的库
-            rxbus       : "com.github.like5188.RxBus:rxbus:1.0.0",
-            Logger      : "com.github.like5188:Logger:1.0.0",
-            Toast       : "com.github.like5188:Toast:1.0.0",
-
+            rxbus        : "com.github.like5188.RxBus:rxbus:1.0.0",
+            Logger       : "com.github.like5188:Logger:1.0.0",
+            Toast        : "com.github.like5188:Toast:1.0.0",
+            CommonLibrary: "com.github.like5188:CommonLibrary:1.0.0",
     ]
 
 }

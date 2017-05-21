@@ -5,6 +5,10 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
+    dataBinding {
+        enabled true
+    }
+
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -44,6 +48,7 @@ dependencies {
     compile rootProject.ext.deps.Toast
 
     compile files('libs/alipaySingle-20170510.jar')
+
 }
 
 apply from: rootProject.file('./gradle-mvn-push.gradle')
