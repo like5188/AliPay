@@ -42,18 +42,18 @@
 ```java
     // 支付成功
     @RxBusSubscribe(RxBusTag.TAG_PAY_SUCCESS)
-    public void TAG_PAY_SUCCESS() {
+    public void onPaySuccess() {
     }
 ```
 ```java
     // 支付结果确认中
     @RxBusSubscribe(RxBusTag.TAG_PAY_RESULT_CONFIRMING)
-    public void TAG_PAY_RESULT_CONFIRMING() {
+    public void onPayResultConfirming() {
     }
 ```
 ```java
     // 支付失败
     @RxBusSubscribe(RxBusTag.TAG_PAY_FAILURE)
-    public void TAG_PAY_FAILURE() {
+    public void onPayFailure() {
     }
 ```
