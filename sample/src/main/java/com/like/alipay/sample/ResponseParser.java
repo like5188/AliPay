@@ -2,8 +2,8 @@ package com.like.alipay.sample;
 
 import android.content.Context;
 
-import com.like.commonlib.retrofit.security.AESUtil;
 import com.like.logger.Logger;
+import com.like.retrofit.request.security.AESUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;

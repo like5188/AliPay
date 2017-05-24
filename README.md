@@ -19,7 +19,6 @@
 ```groovy
     dependencies {
         compile 'com.github.like5188:AliPay:1.0.0'
-        compile 'com.github.like5188.RxBus:rxbus:1.0.0'
         annotationProcessor 'com.github.like5188.RxBus:rxbus_compiler:1.0.0'
     }
 ```
@@ -56,6 +55,12 @@
     @RxBusSubscribe(RxBusTag.TAG_PAY_FAILURE)
     public void onPayFailure() {
     }
+```
+5、引入的库
+```java
+    compile rootProject.ext.deps.rxbus
+    compile rootProject.ext.deps.Logger
+    compile rootProject.ext.deps.Toast
 ```
 # License
 ```xml

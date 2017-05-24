@@ -5,14 +5,14 @@ import android.text.TextUtils;
 import android.view.View;
 
 import com.like.alipay.AliPayUtils;
-import com.like.commonlib.base.context.BaseActivity;
-import com.like.commonlib.base.entity.Host;
-import com.like.commonlib.base.viewmodel.BaseViewModel;
-import com.like.commonlib.retrofit.BaseInterceptor;
-import com.like.commonlib.retrofit.RequestConfig;
-import com.like.commonlib.retrofit.RetrofitUtils;
-import com.like.commonlib.retrofit.security.AESUtil;
-import com.like.commonlib.util.SPUtils;
+import com.like.base.context.BaseActivity;
+import com.like.base.entity.Host;
+import com.like.base.viewmodel.BaseViewModel;
+import com.like.common.util.SPUtils;
+import com.like.retrofit.request.BaseInterceptor;
+import com.like.retrofit.request.RequestConfig;
+import com.like.retrofit.request.RetrofitUtils;
+import com.like.retrofit.request.security.AESUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;

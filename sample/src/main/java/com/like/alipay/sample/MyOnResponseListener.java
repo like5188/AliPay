@@ -2,7 +2,7 @@ package com.like.alipay.sample;
 
 import android.content.Context;
 
-import com.like.commonlib.retrofit.listener.OnResponseListener;
+import com.like.retrofit.request.listener.OnResponseListener;
 
 import okhttp3.ResponseBody;
 
