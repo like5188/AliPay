@@ -39,7 +39,6 @@ dependencies {
     testCompile rootProject.ext.deps.junit
 
     compile rootProject.ext.deps.Common
-    compile rootProject.ext.deps.Common
 
     compile project(':alipay')
 

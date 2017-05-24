@@ -61,6 +61,7 @@
     compile rootProject.ext.deps.rxbus
     compile rootProject.ext.deps.Logger
     compile rootProject.ext.deps.Toast
+    compile rootProject.ext.deps.Retrofit
 ```
 # License
 ```xml
