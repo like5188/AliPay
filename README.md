@@ -18,7 +18,7 @@
 在Module的gradle中加入：
 ```groovy
     dependencies {
-        compile 'com.github.like5188:AliPay:1.0.0'
+        compile 'com.github.like5188:AliPay:1.0.1'
         annotationProcessor 'com.github.like5188.RxBus:rxbus_compiler:1.0.0'
     }
 ```

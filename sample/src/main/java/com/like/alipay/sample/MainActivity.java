@@ -8,10 +8,11 @@ import com.like.alipay.AliPayUtils;
 import com.like.base.context.BaseActivity;
 import com.like.base.entity.Host;
 import com.like.base.viewmodel.BaseViewModel;
-import com.like.common.util.SPUtils;
+import com.like.kotlintest.SPUtils;
 import com.like.retrofit.request.BaseInterceptor;
 import com.like.retrofit.request.RequestConfig;
 import com.like.retrofit.request.RetrofitUtils;
+import com.like.retrofit.request.dialog.SetIpDialog;
 import com.like.retrofit.request.security.AESUtil;
 
 import org.json.JSONException;
@@ -53,13 +54,13 @@ public class MainActivity extends BaseActivity {
 
     private void initRetrofit() {
         SPUtils spUtils = SPUtils.getInstance(this);
-        String ip = spUtils.getIp();
-        int port = spUtils.getPort();
+        String ip = spUtils.get(SetIpDialog.KEY_IP, "");
+        int port = spUtils.get(SetIpDialog.KEY_PORT, 0);
         if (TextUtils.isEmpty(ip)) {
-            ip = "218.21.73.24";
-            port = 81;
-            spUtils.putIp(ip);
-            spUtils.putPort(port);
+            ip = "www.gdep.com.cn";
+            port = 8081;
+            spUtils.put(SetIpDialog.KEY_IP, TextUtils.isEmpty(ip) ? "" : ip);
+            spUtils.put(SetIpDialog.KEY_PORT, port);
         }
         RetrofitUtils.init(new RequestConfig(ip, Api.class).setPort(port)
                 .setInterceptor(new BaseInterceptor() {

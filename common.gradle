@@ -43,11 +43,11 @@ ext {
             umeng                   : "com.umeng.analytics:analytics:latest.integration",// 友盟统计
 
             // 自己写的库
-            Common                  : "com.github.like5188:Common:1.0.1",
-            Logger                  : "com.github.like5188:Logger:1.0.0",
-            Toast                   : "com.github.like5188:Toast:1.0.0",
-            Base                    : "com.github.like5188:Base:1.0.0",
-            Retrofit                : "com.github.like5188:Retrofit:1.0.0",
+            Common                  : "com.github.like5188:Common:1.0.5",
+            Logger                  : "com.github.like5188:Logger:1.0.3",
+            Toast                   : "com.github.like5188:Toast:1.0.1",
+            Base                    : "com.github.like5188:Base:1.0.2",
+            Retrofit                : "com.github.like5188:Retrofit:1.0.2",
             RecyclerView            : "com.github.like5188:RecyclerView:1.0.0",
             SwipMenuLayout          : "com.github.like5188:SwipMenuLayout:1.0.0",
             WebView                 : "com.github.like5188:WebView:1.0.0",
