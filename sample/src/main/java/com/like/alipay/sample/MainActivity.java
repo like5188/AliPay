@@ -8,7 +8,7 @@ import com.like.alipay.AliPayUtils;
 import com.like.base.context.BaseActivity;
 import com.like.base.entity.Host;
 import com.like.base.viewmodel.BaseViewModel;
-import com.like.kotlintest.SPUtils;
+import com.like.common.util.SPUtils;
 import com.like.retrofit.request.BaseInterceptor;
 import com.like.retrofit.request.RequestConfig;
 import com.like.retrofit.request.RetrofitUtils;
