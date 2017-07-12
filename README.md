@@ -58,10 +58,10 @@
 ```
 5、引入的库
 ```java
-    compile rootProject.ext.deps.rxbus
-    compile rootProject.ext.deps.Logger
-    compile rootProject.ext.deps.Toast
-    compile rootProject.ext.deps.Retrofit
+    compile 'com.github.like5188.RxBus:rxbus:1.0.1'
+    compile 'com.github.like5188:Logger:1.0.3'
+    compile 'com.github.like5188:Toast:1.0.1'
+    compile 'com.github.like5188:Retrofit:1.0.2'
 ```
 # License
 ```xml
