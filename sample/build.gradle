@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -38,7 +37,7 @@ dependencies {
     compile rootProject.ext.deps.appcompat_v7
     testCompile rootProject.ext.deps.junit
 
-    compile 'com.github.like5188:Common:1.0.5'
+    compile 'com.github.like5188:Common:1.0.6'
 
     compile project(':alipay')
 

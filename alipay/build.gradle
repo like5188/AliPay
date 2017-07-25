@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -43,10 +42,10 @@ dependencies {
     compile rootProject.ext.deps.appcompat_v7
     testCompile rootProject.ext.deps.junit
 
-    compile 'com.github.like5188.RxBus:rxbus:1.0.1'
-    compile 'com.github.like5188:Logger:1.0.3'
-    compile 'com.github.like5188:Toast:1.0.1'
-    compile 'com.github.like5188:Retrofit:1.0.2'
+    compile 'com.github.like5188.RxBus:rxbus:1.0.2'
+    compile 'com.github.like5188:Logger:1.0.4'
+    compile 'com.github.like5188:Toast:1.0.2'
+    compile 'com.github.like5188:Retrofit:1.0.3'
 }
 
 apply from: rootProject.file('./gradle-mvn-push.gradle')

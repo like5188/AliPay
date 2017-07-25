@@ -18,8 +18,8 @@
 在Module的gradle中加入：
 ```groovy
     dependencies {
-        compile 'com.github.like5188:AliPay:1.0.1'
-        annotationProcessor 'com.github.like5188.RxBus:rxbus_compiler:1.0.0'
+        compile 'com.github.like5188:AliPay:1.0.2'
+        annotationProcessor 'com.github.like5188.RxBus:rxbus_compiler:1.0.2'
     }
 ```
 2、支付
@@ -58,10 +58,10 @@
 ```
 5、引入的库
 ```java
-    compile 'com.github.like5188.RxBus:rxbus:1.0.1'
-    compile 'com.github.like5188:Logger:1.0.3'
-    compile 'com.github.like5188:Toast:1.0.1'
-    compile 'com.github.like5188:Retrofit:1.0.2'
+    compile 'com.github.like5188.RxBus:rxbus:1.0.2'
+    compile 'com.github.like5188:Logger:1.0.4'
+    compile 'com.github.like5188:Toast:1.0.2'
+    compile 'com.github.like5188:Retrofit:1.0.3'
 ```
 # License
 ```xml
