@@ -37,7 +37,7 @@ dependencies {
     compile rootProject.ext.deps.appcompat_v7
     testCompile rootProject.ext.deps.junit
 
-    compile 'com.github.like5188:Common:1.0.6'
+    compile 'com.github.like5188:Common:1.2.0'
 
     compile project(':alipay')
 
