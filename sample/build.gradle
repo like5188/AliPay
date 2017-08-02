@@ -51,7 +51,7 @@ dependencies {
 
     implementation 'com.github.like5188:Common:1.2.0'
     implementation 'com.github.like5188:Base:1.2.0'
-    implementation 'com.github.like5188:Retrofit2:1.0.2'
+    implementation 'com.github.like5188:Retrofit2:1.0.3'
 
     implementation project(':alipay')
 
