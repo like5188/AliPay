@@ -4,10 +4,6 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
-    dataBinding {
-        enabled true
-    }
-
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -28,6 +24,9 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+    dataBinding {
+        enabled true
+    }
     compileOptions {
         sourceCompatibility rootProject.ext.sourceCompatibility
         targetCompatibility rootProject.ext.targetCompatibility
@@ -35,17 +34,16 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile rootProject.ext.deps.appcompat_v7
-    testCompile rootProject.ext.deps.junit
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
 
-    compile 'com.github.like5188.RxBus:rxbus:1.2.0'
-    compile 'com.github.like5188:Logger:1.2.0'
-    compile 'com.github.like5188:Toast:1.2.0'
-    compile 'com.github.like5188:Retrofit:1.2.0'
+    implementation rootProject.ext.deps.appcompat_v7
+    testImplementation rootProject.ext.deps.junit
+
+    implementation 'com.github.like5188.RxBus:rxbus:1.2.0'
+    implementation 'com.github.like5188:Logger:1.2.0'
+    implementation 'com.github.like5188:Toast:1.2.0'
 }
 
 apply from: rootProject.file('./gradle-mvn-push.gradle')

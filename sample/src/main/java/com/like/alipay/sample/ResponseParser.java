@@ -3,7 +3,7 @@ package com.like.alipay.sample;
 import android.content.Context;
 
 import com.like.logger.Logger;
-import com.like.retrofit.request.security.AESUtil;
+import com.like.retrofit.request.security.AESUtilsKt;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,7 +50,8 @@ public class ResponseParser {
      */
     public ResponseParser(Context context, ResponseBody responseBody) throws Exception {
         JSONObject responseJsonObject = new JSONObject(responseBody.string());
-        JSONObject jsonObject = new JSONObject(AESUtil.aesDecrypt(responseJsonObject.getString("data"), AESUtil.AES_KEY));
+        String content = AESUtilsKt.aesDecrypt(responseJsonObject.getString("data"));
+        JSONObject jsonObject = new JSONObject(content);
         Logger.i("ResponseParser --> " + jsonObject.toString());
         try {
             if (jsonObject.has("rcode")) {

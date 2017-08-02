@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -30,17 +31,30 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile rootProject.ext.deps.appcompat_v7
-    testCompile rootProject.ext.deps.junit
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
 
-    compile 'com.github.like5188:Common:1.2.0'
+    implementation rootProject.ext.deps.appcompat_v7
+    testImplementation rootProject.ext.deps.junit
 
-    compile project(':alipay')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+
+    implementation 'com.google.dagger:dagger:2.11'
+
+    implementation 'com.github.like5188:Common:1.2.0'
+    implementation 'com.github.like5188:Base:1.2.0'
+    implementation 'com.github.like5188:Retrofit2:1.0.2'
+
+    implementation project(':alipay')
 
     // Error:Conflict with dependency 'com.google.code.findbugs:jsr305' in project ':app'. Resolved versions for app (3.0.1) and test app (2.0.1) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
-    androidTestCompile 'com.google.code.findbugs:jsr305:3.0.1'
+    androidTestImplementation 'com.google.code.findbugs:jsr305:3.0.1'
 }
