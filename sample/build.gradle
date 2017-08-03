@@ -32,28 +32,18 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation 'com.android.support.test:runner:0.5'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
-
-    implementation rootProject.ext.deps.appcompat_v7
+    androidTestImplementation rootProject.ext.deps.test
+    androidTestImplementation rootProject.ext.deps.espresso
     testImplementation rootProject.ext.deps.junit
+    implementation rootProject.ext.deps.appcompat_v7
+    implementation rootProject.ext.deps.constraint
+    implementation rootProject.ext.deps.kotlin
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.github.like5188:Common:1.3.1'
+    compile 'com.github.like5188:Base:1.3.1'
+    compile 'com.github.like5188:Retrofit2:1.3.1'
 
-    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
-
-    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
-
-    implementation 'com.google.dagger:dagger:2.11'
-
-    implementation 'com.github.like5188:Common:1.2.0'
-    implementation 'com.github.like5188:Base:1.2.0'
-    implementation 'com.github.like5188:Retrofit2:1.0.3'
-
-    implementation project(':alipay')
+    compile project(':alipay')
 
     // Error:Conflict with dependency 'com.google.code.findbugs:jsr305' in project ':app'. Resolved versions for app (3.0.1) and test app (2.0.1) differ. See http://g.co/androidstudio/app-test-app-conflict for details.
     androidTestImplementation 'com.google.code.findbugs:jsr305:3.0.1'
