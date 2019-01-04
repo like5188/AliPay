@@ -1,15 +1,13 @@
 apply plugin: 'com.android.library'
-apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -25,31 +23,29 @@ android {
     dataBinding {
         enabled true
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
+
+    repositories {
+        flatDir {
+            dirs 'libs'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile "com.android.support:appcompat-v7:26.0.0-alpha1"
-    testCompile "junit:junit:4.12"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compileOnly 'com.android.support:appcompat-v7:28.0.0'
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // anko 包含了协程相关的库
+    api('org.jetbrains.anko:anko:0.10.8') {
+        exclude group: 'com.android.support'
+    }
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    kapt 'com.android.databinding:compiler:2.3.3'
-
-    compile 'com.github.like5188.RxBus:rxbus:2.0.0'
-    compile 'com.github.like5188:Logger:2.0.0'
-    compile 'com.github.like5188:Toast:2.0.0'
+    compileOnly 'com.github.like5188.LiveDataBus:livedatabus:1.2.2'
+    // 支付宝 SDK AAR 包所需的配置
+    implementation(name: 'alipaySdk-15.5.9-20181123210601', ext: 'aar')
 }
 
 apply from: rootProject.file('./gradle-mvn-push.gradle')

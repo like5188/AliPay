@@ -1,6 +1,12 @@
-# AliPay
+#### 最新版本
 
-支付宝使用工具
+模块|AliPay
+---|---
+最新版本|[![Download](https://jitpack.io/v/like5188/AliPay.svg)](https://jitpack.io/#like5188/AliPay)
+
+## 功能介绍
+
+1、支付宝支付封装
 
 ## 使用方法：
 
@@ -17,57 +23,61 @@
 ```
 在Module的gradle中加入：
 ```groovy
+    android {
+        repositories {
+            flatDir {
+                dirs 'libs', '../alipay/libs'
+            }
+        }
+    }
     dependencies {
-        compile 'com.github.like5188:AliPay:2.0.0'
-        annotationProcessor 'com.github.like5188.RxBus:rxbus_compiler:2.0.0'// 用于接收返回结果
+        implementation 'com.github.like5188:AliPay:版本号'
+        // 引用LiveDataBus库，用于接收返回结果
+        implementation 'com.github.like5188.LiveDataBus:livedatabus:1.2.2'
+        kapt 'com.github.like5188.LiveDataBus:livedatabus_compiler:1.2.2'
     }
 ```
+
 2、支付
 ```java
-    AliPayUtils.getInstance(context).pay(orderInfoString);
+    AliPayUtils.getInstance(activity).pay(orderInfoString);
 ```
+
 3、获取支付宝SDK版本号
 ```java
-    AliPayUtils.getInstance(context).getSDKVersion();
+    AliPayUtils.getInstance(activity).getSDKVersion();
 ```
+
 4、接收返回结果
 ```java
     在任意一个类中注册
-    RxBus.register(this);
-    在这个类销毁时反注册
-    RxBus.unregister(this);
+    LiveDataBus.register(this, this);
 ```
         然后用下面三个方法接收支付宝返回的结果
 ```java
     // 支付成功
-    @RxBusSubscribe(RxBusTag.TAG_PAY_SUCCESS)
+    @RxBusSubscribe(AliPayUtils.TAG_PAY_SUCCESS)
     public void onPaySuccess() {
     }
 ```
 ```java
     // 支付结果确认中
-    @RxBusSubscribe(RxBusTag.TAG_PAY_RESULT_CONFIRMING)
+    @RxBusSubscribe(AliPayUtils.TAG_PAY_RESULT_CONFIRMING)
     public void onPayResultConfirming() {
     }
 ```
 ```java
     // 支付失败
-    @RxBusSubscribe(RxBusTag.TAG_PAY_FAILURE)
+    @RxBusSubscribe(AliPayUtils.TAG_PAY_FAILURE)
     public void onPayFailure() {
     }
 ```
-# License
-```xml
-    Copyright 2017 like5188
-    
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-    
-    http://www.apache.org/licenses/LICENSE-2.0
-    
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+
+5、Proguard
+```java
+    -dontwarn android.net.**
+
+    # LiveDataBus
+    -keep class * extends com.like.livedatabus.Bridge
+    -keep class com.like.livedatabus_annotations.**{*;}
+```
