@@ -23,5 +23,5 @@
 2、支付
 
 ```java
-    AliPayUtils.pay(activity,orderInfoString)
+    AliPayUtils.pay(activity, orderInfoString)
 ```
