@@ -1,1 +1,3 @@
-include ':sample', ':alipay'
+rootProject.name = 'AliPay'
+include ':sample'
+include ':alipay'
