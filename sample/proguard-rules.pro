@@ -25,7 +25,3 @@
 #-renamesourcefileattribute SourceFile
 
 -dontwarn android.net.**
-
-# LiveDataBus
--keep class * extends com.like.livedatabus.Bridge
--keep class com.like.livedatabus_annotations.**{*;}
