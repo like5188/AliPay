@@ -11,6 +11,7 @@ object AliPayUtils {
     /**
      * 支付
      * @param orderInfo 订单信息
+     * @return 同步通知结果
      */
     suspend fun pay(activity: Activity, orderInfo: String): Boolean = withContext(Dispatchers.IO) {
         // 用户在商户 app 内部点击付款，是否需要一个 loading 做为在钱包唤起之前的过渡，这个值设置为 true，将会在调用 pay 接口的时候直接唤起一个 loading，直到唤起 H5 支付页面或者唤起外部的钱包付款页面 loading 才消失。（建议将该值设置为 true，优化点击付款到支付唤起支付页面的过渡过程。）
